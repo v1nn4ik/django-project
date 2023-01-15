@@ -1,0 +1,18 @@
+{% extends 'myMainApp/basic.html' %}
+
+{% block title %}
+    Главная
+{% endblock %}
+
+{% block content %}
+    {% if data|length > 0 %}
+        {% for e in data %}
+            <div class="main-article">
+                <p class="main-title">{{e.title}}</p>
+                <p>{{e.text}}</p>
+            </div>
+        {% endfor %}
+    {% else %}
+        <p>Пусто</p>
+    {% endif %}
+{% endblock %}

@@ -1,0 +1,50 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}{% endblock %}</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link rel="stylesheet" href="{% static 'css/normalize.css' %}">
+</head>
+
+<body>
+    <header class="header">
+        <div class="flex header-content">
+            <a class="header-logo-text" href="/">Vinnik</a>
+            <nav class="flex nav">
+                <ul class="list-reset flex">
+                    <li class="nav-list-item">
+                        <a href="/">Главная</a>
+                    </li>
+                    <li class="nav-list-item">
+                        <a href="salary">Востребованность</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="main">
+        <div class="main-cont">
+            {% block content %}
+            {% endblock %}
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-cont">
+            <p>
+                Винник Константин
+            </p>
+            <p>
+                Группа
+            </p>
+        </div>
+    </footer>
+</body>
+
+</html>

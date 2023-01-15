@@ -1,0 +1,17 @@
+{% extends 'myMainApp/basic.html' %}
+
+{% block title %}
+    Востребованность
+{% endblock %}
+
+{% block content %}
+    {% if data|length > 0 %}
+        {% for e in data %}
+            <p>{{e.title}}</p>
+            <p>{{e.text}}</p>
+            <img src="{{ e.img.url }}">
+        {% endfor %}
+    {% else %}
+        <p>Пусто</p>
+    {% endif %}
+{% endblock %}
